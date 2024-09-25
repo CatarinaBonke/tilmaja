@@ -1,0 +1,301 @@
+/* Generel styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #FF66CC; /* Sart lyserød farve */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f898ce;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5px;
+}
+
+.logo img{
+    padding-left: 20px;
+}
+
+.navbar .logo img {
+    height: 50px;
+
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Om mig sektion */
+.about-section {
+    margin-top: 100px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    align-items: center;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 250px; /* Større billede til større skærme */
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Mobil-visning */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column-reverse; /* Teksten nederst, billedet øverst */
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin: 0 auto 20px;
+        width: 150px; /* Mindre billede til mobil */
+    }
+
+    .about-text {
+        padding: 0;
+    }
+}
+
+
+/* Projekter sektion */
+.projects-section {
+    padding: 40px;
+    background-color: #fff;
+}
+
+.projects-section h2{
+    padding-top: 100px;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default: 1 boks på mobil */
+    gap: 20px;
+}
+
+/* Tablet-visning */
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 bokse ved siden af hinanden på tablet */
+    }
+}
+
+/* Desktop-visning */
+@media (min-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 bokse ved siden af hinanden på computer */
+    }
+}
+
+.project-box {
+    padding: 20px;
+    margin: 10px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.project-box h3 {
+    margin-bottom: 10px;
+}
+
+.project-box button {
+    background-color: #FF66CC;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.billedehistorik{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    
+}
+
+.billedehistorik h1{
+    position: absolute;
+}
+
+.catblomst{
+    padding: 10px;
+}
+
+/* Uddannelseshistorik sektion */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    position: relative;
+}
+
+.education-box {
+    padding: 0px 20%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+    margin: 20px 20px;
+}
+
+/* Forbindende streger mellem kasser */
+.timeline-connector {
+    width: 3px;
+    height: 20px;
+    background-color: #FF66CC;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 0;
+}
+
+/* Responsiv styling */
+
+@media (min-width: 768px) {
+    .education-box {
+        width: 50%;
+    }
+
+    .timeline-connector {
+        height: 80px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .education-box {
+        width: 70%;
+    }
+
+    .timeline-connector {
+        height: 50px;
+    }
+}
+
+/* Kontakt sektion */
+.box {
+    width: 500px;
+    padding-bottom: 50px;
+    display: flex;
+}
+
+.kontakt {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+/* Tekst input når du skriver i kontaktformularen bliver designet og placeret */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ebe5e5;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin: 6px 0 16px 0;
+    resize: vertical;
+    justify-content: center;
+    display: flex;
+}
+
+
+/* Tekst felterne inde i kontaktformularen får en størrelse og placeres */
+.container {
+    width: 80%;
+    min-height: 10vh;
+    border-radius: 5px;
+    background-color: #cccfcc;
+    padding: 32px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #f898ce;
+}
+
+input[type=submit] {
+    background-color: #FF66CC;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 60%;
+}
+
+input[type=submit]:hover {
+    background-color: #f9f9f9;
+    color: #FF66CC;
+}
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #FF66CC;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.footer-content a {
+    margin: 0 10px;
+}
+
+.footer-content img {
+    width: 30px;
+    height: 30px;
+}

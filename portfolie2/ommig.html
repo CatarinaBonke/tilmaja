@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Min Portfolie</title>
+        <link rel="stylesheet" href="styleheet.css">
+    </head>
+<body>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="/img/kat.png" alt="Logo"></a>
+            </div>
+          
+            <ul>
+                <li><a href="ommig.html">Om mig</a></li>
+                <li><a href="index.html">Projekter</a></li>
+            </ul>
+        </nav>
+       
+   
+        <!-- Historikken plus billede -->
+      
+        
+    <section class="billedehistorik">
+        <h1>Kontakt mig</h1>
+      <div class="catblomst"> <img src="/img/catblomstt.png" alt="Billede af catarina"></div>
+
+      <div class="uddannelseshistorik">
+          <h2>Min Uddannelseshistorik</h2>
+          <div class="timeline">
+              <div class="education-box">
+                  <h3>Multimediedesign</h3>
+                  <p>CPH Business, Kgs. Lyngby (2023 - 2024)</p>
+              </div>
+              <div class="timeline-connector"></div>
+              <div class="education-box">
+                  <h3>HTX</h3>
+                  <p>Teknisk Gymnasium Hillerød (2020 - 2023)</p>
+              </div>
+              <div class="timeline-connector"></div>
+              <div class="education-box">
+                  <h3>Folkeskole</h3>
+                  <p>Alme Kristne Private friskole (2010 - 2020)</p>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+        <!-- Kontakt tekst og ikoner -->
+<div class="kontakt">
+  <div class="kontaktTekst">
+      <h2>Kontakt mig</h2>
+      <p>Hold endelig ikke tilbage med at tage kontakt til mig!</p>
+      <div class="kontaktIndhold">
+          <div class="kontaktBoks">
+              <div class="text">
+                  <h3>Telefon nr.:</h3>
+                  <p>+45 5070 8336</p>
+              </div>
+          </div>
+          <div class="kontaktBoks">
+              <div class="text">
+                  <h3>Email:</h3>
+                  <p>catbonke2004@gmail.com</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Kontaktformular -->
+  <div class="box">
+      <div class="container">
+          <form id="contactForm">
+              <label for="fname">Dit navn</label>
+              <input type="text" id="fname" name="firstname" placeholder="Dit navn..">
+              
+              <label for="emails">Email</label>
+              <input type="text" id="emails" name="dinmail" placeholder="Din email..">
+              
+              <label for="subject">Besked</label>
+              <textarea id="subject" name="subject" placeholder="Skriv din besked.." style="height:200px"></textarea>
+              
+              <input type="submit" value="Submit">
+          </form>
+      </div>
+  </div>
+</div>
+  <main>
+        <div>
+          <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_mqyg38h', 'template_w7kro86', this)
+                        .then(() => {
+                            console.log('SUCCESS!');
+                            alert("Din besked er blevet sendt!"); // Giver besked til brugeren at mailen er sendt afsted
+                            }, (error) => {
+                    console.log('FAILED...', error);
+                    alert("Din besked er ikke sendt!"); // Giver besked til brugeren at mailen ikke er sendt afsted
+                });
+                        
+                });
+            }
+          </script>
+        </div>
+    </main>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+            <a href="#"><img src="ikon1.png" alt="FB"></a>
+            <a href="#"><img src="ikon2.png" alt="Insta"></a>
+            <a href="#"><img src="ikon3.png" alt="Linked in"></a>
+        </div>
+    </footer>
+
+</body>
+</html>
